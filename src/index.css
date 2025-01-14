@@ -257,3 +257,21 @@ body {
     width: 500px;
   }
 }
+
+/* my styles  */
+
+.email_error {
+  font-size: 14px;
+  color: red;
+  margin-top: 8px;
+}
+
+.comingsoon_text {
+  color: red;
+}
+
+.failed_login_text {
+  color: red;
+}
+
+/* my styles  */
