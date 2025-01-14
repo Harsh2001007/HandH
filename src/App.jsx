@@ -6,7 +6,6 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
-import { use } from "react";
 
 function App() {
   const [name, setName] = useState("");
