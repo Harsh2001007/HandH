@@ -38,7 +38,6 @@ function App() {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCred) => {
         const user = userCred.user;
-        console.log(user, "-------user-----------------");
         console.log("user signed up successfully");
       })
       .catch((err) => {
