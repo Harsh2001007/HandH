@@ -1,6 +1,5 @@
-
 import { useRef, useState, useEffect } from "react";
-import './../App.jsx'
+import "./../App.jsx";
 
 import {
   getAuth,
@@ -8,9 +7,8 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 
-
 function Login() {
-    const [name, setName] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errMsg, setErrmsg] = useState(false);
@@ -280,7 +278,7 @@ function Login() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Login
+export default Login;
