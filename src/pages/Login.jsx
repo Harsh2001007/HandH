@@ -1,11 +1,11 @@
 import { useRef, useState, useEffect } from "react";
 import "./../App.jsx";
-
 import {
   getAuth,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+import { useNavigate } from "react-router";
 
 function Login() {
   const [name, setName] = useState("");
@@ -14,6 +14,8 @@ function Login() {
   const [errMsg, setErrmsg] = useState(false);
   const [comingSoon, setComingsoon] = useState(false);
   const [loginErr, setLoginErr] = useState(false);
+
+  const navigate = useNavigate();
 
   const passHandler = (e) => {
     setPassword(e.target.value);
@@ -35,21 +37,22 @@ function Login() {
   };
 
   const signUpBtnHandler = () => {
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((userCred) => {
-        const user = userCred.user;
-        console.log("user signed up successfully");
-      })
-      .catch((err) => {
-        const errCode = err.code;
-        const errMsg = err.message;
-        console.log(errCode);
-        console.log(errMsg);
-        setEmail("");
-        setPassword("");
-        setName("");
-        setErrmsg(true);
-      });
+    // createUserWithEmailAndPassword(auth, email, password)
+    //   .then((userCred) => {
+    //     const user = userCred.user;
+    //     console.log("user signed up successfully");
+    //   })
+    //   .catch((err) => {
+    //     const errCode = err.code;
+    //     const errMsg = err.message;
+    //     console.log(errCode);
+    //     console.log(errMsg);
+    //     setEmail("");
+    //     setPassword("");
+    //     setName("");
+    //     setErrmsg(true);
+    //   });
+    navigate("/dashboard");
   };
 
   const signInBtnHandler = () => {
