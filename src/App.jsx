@@ -1,7 +1,5 @@
-import { useRef, useState, useEffect } from "react";
 import "./App.css";
 import Dashboard from "./pages/Dashboard";
-import FirestoreTest from "./pages/FirestoreTest";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./pages/Login";
 

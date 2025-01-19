@@ -1,4 +1,3 @@
-import React from "react";
 import "./../styles/Dashboard.css";
 import logo from "./../assets/images/logo.png";
 import { RiHome6Line } from "react-icons/ri";
